@@ -3,7 +3,6 @@
 # SFTransT
 The implement of [_Learning Spatial-Frequency Transformer for Visual Object Tracking_](https://arxiv.org/abs/2208.08829)
 
-Will be released when the article is officially published.
 
 <p align="center">
   <img width="85%" src="https://github.com/Tchuanm/SFTransT/blob/main/arch.png" alt="Framework"/>
@@ -24,11 +23,8 @@ SFTransT follows the Siamese matching framework which takes the template and sea
 conda create -n sftranst python=3.7
 conda activate sftranst
 ```
-<<<<<<< HEAD
-2. Install the necessary packages
-=======
+
 2. Install the necessary packages. Please install them line by line to ensure the success.
->>>>>>> master
 ```bash
 conda install -c pytorch pytorch=1.5 torchvision=0.6.1 cudatoolkit=10.2
 conda install matplotlib pandas tqdm
@@ -37,12 +33,6 @@ conda install cython scipy
 sudo apt-get install libturbojpeg
 pip install pycocotools jpeg4py
 pip install wget yacs
-<<<<<<< HEAD
-pip install shapely==1.6.4.post2
-```
-
-3. Add the softlink of datasets into the path './dataset/'.4.
-=======
 pip install shapely==1.6.4.post2 
 pip install timm
 pip install einops
@@ -56,7 +46,6 @@ pip install einops
         |--.......
 
    
->>>>>>> master
 4. Setup Environment.
 
 ```bash
@@ -72,11 +61,7 @@ python -c "from ltr.admin.environment import create_default_local_file; create_d
 cd SFTransT/ltr
 conda activate sftranst
 export CUDA_VISIBLE_DEVICES=4,5,6,7
-<<<<<<< HEAD
-python run_training.py --train_module sftranst  --train_name sftranst_train_cfa_smca_attnscale_mlp  
-=======
 python run_training.py --train_module sftranst  --train_name sftranst_cfa_gpha_mlp  
->>>>>>> master
 ```
 
 
@@ -86,11 +71,7 @@ python run_training.py --train_module sftranst  --train_name sftranst_cfa_gpha_m
 ```bash
 cd SFTransT/pysot_toolkit
 conda activate sftranst
-<<<<<<< HEAD
-python eval_got10k_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_train_cfa_smca_attnscale_mlp --subset test
-=======
 python eval_got10k_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_cfa_gpha_mlp --subset test
->>>>>>> master
 ```
 
 2. For other datasets. 
@@ -125,3 +106,4 @@ or
   year={2023},
   doi={10.1109/TCSVT.2023.3249468}}
 ```
+
