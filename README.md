@@ -12,6 +12,12 @@ Will be released when the article is officially published.
 ## TL;DR
 SFTransT follows the Siamese matching framework which takes the template and search frame as input. The Swin-Tiny network is adopted as the backbone, and the cross-scale features are fused as embedded features. Then, a Multi-Head Cross-Attention (MHCA) module is used to boost the interactions between the dual features. The output will be fed into our core component Spatial-Frequency Transformer, which models the Gaussian spatial prior and low-/high-frequency feature information simultaneously. More in detail, the GGN is adopted to predict the Gaussian spatial attention which will be added to the self-attention matrix. Then, the GPHA is designed to decompose them into low- and high-pass branches to achieve all-pass information propagation. Finally, the enhanced features will be fed into the classification and regression head for target object tracking. C , R , S represent the Concatenate, Rearrange, and Shift-and-Sum operators, respectively.
 
+
+| GOT-10K (AO) |   Tracker   | LaSOT (AUC) | TrackingNet (AUC) | UAV123(AUC) | LaSOT-ext(AUC) | TNL2k(AUC) | WebUAV-3M |
+|:------------:|:-----------:|:-----------:|:-----------------:|:-----------:|:--------------:|:----------:|-----------|
+|     72.7     |  SFTransT   |    69.0     |       82.9        |    71.3     |      46.4      |    54.6    |   58.2    | 
+
+
 ## Installation
 1. Create and activate a conda environment
 ```bash
