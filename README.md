@@ -21,8 +21,8 @@ SFTransT follows the Siamese matching framework which takes the template and sea
 ## Installation
 1. Create and activate a conda environment
 ```bash
-conda create -n transt python=3.7
-conda activate transt
+conda create -n sftranst python=3.7
+conda activate sftranst
 ```
 2. Install the necessary packages
 ```bash
@@ -40,7 +40,6 @@ pip install shapely==1.6.4.post2
 4. Setup Environment.
 
 ```bash
-# Change directory to <PATH_of_TransT>
 # Environment settings for ltr. Saved at ltr/admin/local.py
 cd SFTransT
 python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
@@ -50,8 +49,8 @@ python -c "from ltr.admin.environment import create_default_local_file; create_d
 ## Run training 
 
 ```bash
-cd tcm/SFTransT/ltr
-conda activate transt
+cd SFTransT/ltr
+conda activate sftranst
 export CUDA_VISIBLE_DEVICES=4,5,6,7
 python run_training.py --train_module sftranst  --train_name sftranst_train_cfa_smca_attnscale_mlp  
 ```
@@ -62,7 +61,7 @@ python run_training.py --train_module sftranst  --train_name sftranst_train_cfa_
 
 ```bash
 cd SFTransT/pysot_toolkit
-conda activate transt
+conda activate sftranst
 python eval_got10k_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_train_cfa_smca_attnscale_mlp --subset test
 ```
 
