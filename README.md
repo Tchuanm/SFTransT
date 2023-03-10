@@ -56,7 +56,11 @@ python -c "from ltr.admin.environment import create_default_local_file; create_d
 ```
 
 
-## Run training 
+## Training 
+1. download pretrained model of [Swin-Tiny](https://drive.google.com/file/d/1eYsPtk1kmk_ZFuJbp05PAwY2GFpdCosw/view?usp=sharing),
+and put into the ```ltr/models/backbone/```
+
+2. run commmend
 
 ```bash
 cd SFTransT/ltr
