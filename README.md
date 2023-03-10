@@ -1,6 +1,6 @@
 
 
-# SFTransT
+# SFTransT: Learning Spatial-Frequency Transformer for Visual Object Tracking
 The implement of [_Learning Spatial-Frequency Transformer for Visual Object Tracking_](https://arxiv.org/abs/2208.08829)
 
 
@@ -39,12 +39,13 @@ pip install einops
 ```
 
 3. Add the softlink of datasets into the path './dataset/'
-    |--dataset
+```
+     |--dataset
         |--got10k
         |--lasot
         |--trackingnet
         |--.......
-
+```
    
 4. Setup Environment.
 
