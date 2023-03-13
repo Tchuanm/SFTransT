@@ -1,7 +1,8 @@
 
 
 # SFTransT: Learning Spatial-Frequency Transformer for Visual Object Tracking
-The implement of [_Learning Spatial-Frequency Transformer for Visual Object Tracking_](https://arxiv.org/abs/2208.08829)
+The official implement of [_Arxiv_](https://arxiv.org/abs/2208.08829)[_IEEE T-CSVT_](https://ieeexplore.ieee.org/document/10054166)
+
 
 
 <p align="center">
@@ -9,8 +10,7 @@ The implement of [_Learning Spatial-Frequency Transformer for Visual Object Trac
 </p>
 
 ## TL;DR
-SFTransT follows the Siamese matching framework which takes the template and search frame as input. The Swin-Tiny network is adopted as the backbone, and the cross-scale features are fused as embedded features. Then, a Multi-Head Cross-Attention (MHCA) module is used to boost the interactions between the dual features. The output will be fed into our core component Spatial-Frequency Transformer, which models the Gaussian spatial prior and low-/high-frequency feature information simultaneously. More in detail, the GGN is adopted to predict the Gaussian spatial attention which will be added to the self-attention matrix. Then, the GPHA is designed to decompose them into low- and high-pass branches to achieve all-pass information propagation. Finally, the enhanced features will be fed into the classification and regression head for target object tracking. C , R , S represent the Concatenate, Rearrange, and Shift-and-Sum operators, respectively.
-
+SFTransT follows the Siamese matching framework which takes the template and search frame as input. The Swin-Tiny network is adopted as the backbone, and the cross-scale features are fused as embedded features. Then, a Multi-Head Cross-Attention (MHCA) module is used to boost the interactions between the dual features. The output will be fed into our core component Spatial-Frequency Transformer, which models the Gaussian spatial prior and low-/high-frequency feature information simultaneously. More in detail, the GGN is adopted to predict the Gaussian spatial attention which will be added to the self-attention matrix. Then, the GPHA is designed to decompose them into low- and high-pass branches to achieve all-pass information propagation. Finally, the enhanced features will be fed into the classification and regression head for target object tracking.
 
 | GOT-10K (AO) |   Tracker   | LaSOT (AUC) | TrackingNet (AUC) | UAV123(AUC) | LaSOT-ext(AUC) | TNL2k(AUC) | WebUAV-3M |
 |:------------:|:-----------:|:-----------:|:-----------------:|:-----------:|:--------------:|:----------:|-----------|
