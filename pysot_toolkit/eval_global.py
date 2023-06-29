@@ -16,7 +16,7 @@ import shutil
 """
 cd tcm/SFTransT/pysot_toolkit
 conda activate transt
-python eval_got10k_global.py --cuda 0  --begin 95 --end 100 --interval 1 --folds sftranst_train_cfa_smca_attnscale_mlp --subset test
+python eval_global.py --cuda 0  --begin 95 --end 100 --interval 1 --folds sftranst_train_cfa_smca_attnscale_mlp --subset test
 """
 
 parser = argparse.ArgumentParser(description='got10k tracking test or val subset')
