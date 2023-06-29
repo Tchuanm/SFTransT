@@ -76,7 +76,7 @@ python run_training.py --train_module sftranst  --train_name sftranst_cfa_gpha_m
 ```bash
 cd SFTransT/pysot_toolkit
 conda activate sftranst
-python eval_got10k_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_cfa_gpha_mlp --subset test
+python eval_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_cfa_gpha_mlp --subset test
 ```
 
 2. For other datasets. 
