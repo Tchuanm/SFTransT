@@ -13,7 +13,7 @@ The official implement of [_Arxiv_](https://arxiv.org/abs/2208.08829)[_IEEE T-CS
 SFTransT follows the Siamese matching framework which takes the template and search frame as input. The Swin-Tiny network is adopted as the backbone, and the cross-scale features are fused as embedded features. Then, a Multi-Head Cross-Attention (MHCA) module is used to boost the interactions between the dual features. The output will be fed into our core component Spatial-Frequency Transformer, which models the Gaussian spatial prior and low-/high-frequency feature information simultaneously. More in detail, the GGN is adopted to predict the Gaussian spatial attention which will be added to the self-attention matrix. Then, the GPHA is designed to decompose them into low- and high-pass branches to achieve all-pass information propagation. Finally, the enhanced features will be fed into the classification and regression head for target object tracking.
 
 | Tracker |   GOT-10K (AO)   | LaSOT (AUC) | TrackingNet (AUC) | UAV123(AUC) | LaSOT-ext(AUC) | TNL2k(AUC) | WebUAV-3M |
-|:------------:|:-----------:|:-----------:|:-----------------:|:-----------:|:--------------:|:----------:|-----------|
+|:------------:|:-----------:|:-----------:|:-----------------:|:-----------:|:--------------:|:----------:|:---------:|
 |  SFTransT    |   72.7      |    69.0     |       82.9        |    71.3     |      46.4      |    54.6    |   58.2    | 
 
 
@@ -65,7 +65,6 @@ and put into the ```ltr/models/backbone/```
 ```bash
 cd SFTransT/ltr
 conda activate sftranst
-export CUDA_VISIBLE_DEVICES=4,5,6,7
 python run_training.py --train_module sftranst  --train_name sftranst_cfa_gpha_mlp  
 ```
 
@@ -93,6 +92,15 @@ Thanks for the [TransT](https://github.com/chenxin-dlut/TransT/tree/main/pysot_t
 
 
 ## Citation
+```
+@ARTICLE{tang2022learning,
+  author={Tang, Chuanming and Wang, Xiao and Bai, Yuanchao and Wu, Zhe and Zhang, Jianlin and Huang, Yongmei},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Learning Spatial-Frequency Transformer for Visual Object Tracking}, 
+  year={2023},
+  doi={10.1109/TCSVT.2023.3249468}}
+```
+or
 
 ```
 @article{tang2022learning,
@@ -102,14 +110,3 @@ Thanks for the [TransT](https://github.com/chenxin-dlut/TransT/tree/main/pysot_t
   year={2022}
 }
 ```
-
-or
-```
-@ARTICLE{tang2022learning,
-  author={Tang, Chuanming and Wang, Xiao and Bai, Yuanchao and Wu, Zhe and Zhang, Jianlin and Huang, Yongmei},
-  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
-  title={Learning Spatial-Frequency Transformer for Visual Object Tracking}, 
-  year={2023},
-  doi={10.1109/TCSVT.2023.3249468}}
-```
-
