@@ -1,7 +1,7 @@
 
 
 # SFTransT: Learning Spatial-Frequency Transformer for Visual Object Tracking
-The official implement of [_Arxiv_](https://arxiv.org/abs/2208.08829)[_IEEE T-CSVT_](https://ieeexplore.ieee.org/document/10054166)
+The official implement of SFTransT.  [_Arxiv_](https://arxiv.org/abs/2208.08829), [_IEEE T-CSVT_](https://ieeexplore.ieee.org/document/10054166)
 
 
 
