@@ -79,9 +79,10 @@ conda activate sftranst
 python eval_global.py --cuda 0  --begin 99 --end 100 --interval 1 --folds sftranst_cfa_gpha_mlp --subset test
 ```
 
-2. For other datasets. 
+2. For other datasets, like LaSOT:
+```bash
 python test_global.py --dataset LaSOT --cuda 5 --epoch 300  --win 0.50
-
+```
 
 
 ## Acknowledgement
